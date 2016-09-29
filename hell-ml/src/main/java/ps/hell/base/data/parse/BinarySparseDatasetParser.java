@@ -1,0 +1,148 @@
+/*******************************************************************************
+ * Copyright (c) 2010 Haifeng Li
+ *   
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *  
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *******************************************************************************/
+
+package ps.hell.base.data.parse;
+
+import ps.hell.base.data.BinarySparseDataset;
+
+import java.io.*;
+import java.net.URI;
+import java.text.ParseException;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * Parser for binary spare dataset. In the file, each line is a datum as an
+ * integer list, which are the indices of nonzero elements. During the parsing,
+ * the duplicated indices will be removed and indices will be sorted into
+ * ascending order
+ * 
+ * @author Haifeng Li
+ */
+public class BinarySparseDatasetParser {
+    /**
+     * Constructor.
+     */
+    public BinarySparseDatasetParser() {
+    }
+
+    /**
+     * Parse a binary sparse dataset from given URI.
+     * @throws FileNotFoundException
+     */
+    public BinarySparseDataset parse(URI uri) throws FileNotFoundException, IOException, ParseException {
+        return parse(new File(uri));
+    }
+
+    /**
+     * Parse a binary sparse dataset from given URI.
+     * @param uri the URI of data source.
+     * @throws FileNotFoundException
+     */
+    public BinarySparseDataset parse(String name, URI uri) throws FileNotFoundException, IOException, ParseException {
+        return parse(name, new File(uri));
+    }
+
+    /**
+     * Parse a binary sparse dataset from given file.
+     * @throws FileNotFoundException
+     */
+    public BinarySparseDataset parse(String path) throws FileNotFoundException, IOException, ParseException {
+        return parse(new File(path));
+    }
+
+    /**
+     * Parse a binary sparse dataset from given file.
+     * @param path the file path of data source.
+     * @throws FileNotFoundException
+     */
+    public BinarySparseDataset parse(String name, String path) throws FileNotFoundException, IOException, ParseException {
+        return parse(name, new File(path));
+    }
+
+    /**
+     * Parse a binary sparse dataset from given file.
+     * @throws FileNotFoundException
+     */
+    public BinarySparseDataset parse(File file) throws FileNotFoundException, IOException, ParseException {
+        String name = file.getPath();
+        return parse(name, new FileInputStream(file));
+    }
+
+    /**
+     * Parse a binary sparse dataset from given file.
+     * @param file the file of data source.
+     * @throws FileNotFoundException
+     */
+    public BinarySparseDataset parse(String name, File file) throws FileNotFoundException, IOException, ParseException {
+        return parse(name, new FileInputStream(file));
+    }
+
+    /**
+     * Parse a binary sparse dataset from an input stream.
+     * @param stream the input stream of data.
+     * @throws FileNotFoundException
+     */
+    public BinarySparseDataset parse(InputStream stream) throws IOException, ParseException {
+        return parse("Binary Sparse Dataset", stream);
+    }
+
+    /**
+     * Parse a binary sparse dataset from an input stream.
+     * @param name the name of dataset.
+     * @param stream the input stream of data.
+     * @throws FileNotFoundException
+     */
+    public BinarySparseDataset parse(String name, InputStream stream) throws IOException, ParseException {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream))) {
+
+           BinarySparseDataset sparse = new BinarySparseDataset(name);
+        
+           String line = reader.readLine();
+           if (line == null) {
+                throw new IOException("Empty data source.");
+           }
+        
+           Set<Integer> items = new HashSet<Integer>();
+           do {
+                line = line.trim();
+                if (line.isEmpty()) {
+                    continue;
+                }
+
+                String[] s = line.split("\\s+");
+            
+                items.clear();
+                for (int i = 0; i < s.length; i++) {
+                    items.add(Integer.parseInt(s[i]));
+                }
+
+                int j = 0;
+                int[] point = new int[items.size()];
+                for (int i : items) {
+                    point[j++] = i;
+                }
+
+                Arrays.sort(point);
+                sparse.add(point);
+                line = reader.readLine();
+            } while (line != null);
+
+            return sparse;
+        }
+    }
+}

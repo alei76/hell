@@ -1,0 +1,105 @@
+package ps.hell.ml.nlp.tool.aliasi.test.unit.features;
+
+import ps.hell.ml.nlp.tool.aliasi.chunk.*;
+import ps.hell.ml.nlp.tool.aliasi.features.ChunkerFeatureExtractor;
+import ps.hell.ml.nlp.tool.aliasi.util.AbstractExternalizable;
+import ps.hell.ml.nlp.tool.aliasi.util.FeatureExtractor;
+import org.junit.Test;
+
+import java.io.IOException;
+import java.io.Serializable;
+import java.util.Map;
+
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertTrue;
+
+public class ChunkerFeatureExtractorTest {
+
+    @Test
+    public void testNonPhrasal() throws IOException {
+
+        ChunkerFeatureExtractor extractor
+            = new ChunkerFeatureExtractor(new MockChunker(),
+                                          false);
+
+        @SuppressWarnings("unchecked")
+        FeatureExtractor<CharSequence> extractorDeser
+            = (FeatureExtractor<CharSequence>)
+            AbstractExternalizable.serializeDeserialize(extractor);
+
+        Map<String,? extends Number> features
+            = extractor.features("1");
+        assertTrue(features.isEmpty());
+
+        features = extractorDeser.features("1");
+        assertTrue(features.isEmpty());
+
+        features = extractor.features("2");
+        assertEquals(2,features.size());
+        assertEquals(1.0,features.get("LOC"));
+        assertEquals(2.0,features.get("PER"));
+
+        features = extractorDeser.features("2");
+        assertEquals(2,features.size());
+        assertEquals(1.0,features.get("LOC"));
+        assertEquals(2.0,features.get("PER"));
+   
+        
+    }
+
+    @Test
+    public void testPhrasal() throws IOException {
+
+        ChunkerFeatureExtractor extractor
+            = new ChunkerFeatureExtractor(new MockChunker(),
+                                          true);
+
+        @SuppressWarnings("unchecked")
+        FeatureExtractor<CharSequence> extractorDeser
+            = (FeatureExtractor<CharSequence>)
+            AbstractExternalizable.serializeDeserialize(extractor);
+
+        Map<String,? extends Number> features
+            = extractor.features("1");
+        assertTrue(features.isEmpty());
+
+        features = extractorDeser.features("1");
+        assertTrue(features.isEmpty());
+
+        features = extractor.features("2");
+        assertEquals(2,features.size());
+        assertEquals(1.0,features.get("LOC_Washington"));
+        assertEquals(2.0,features.get("PER_John"));
+
+        features = extractorDeser.features("2");
+        assertEquals(2,features.size());
+        assertEquals(1.0,features.get("LOC_Washington"));
+        assertEquals(2.0,features.get("PER_John"));
+    }
+
+    static class MockChunker implements Chunker, Serializable {
+        public Chunking chunk(char[] cs, int start, int end) {
+            return chunk(new String(cs,start,end-start));
+        }
+        public Chunking chunk(CharSequence in) {
+            if (in.equals("1"))
+                return chunking("John ran");
+            else if (in.equals("2"))
+                return chunking("John met John in Washington.",
+                              // 01234567890123456789012345678
+                                ChunkFactory.createChunk(0,4,"PER"),
+                                ChunkFactory.createChunk(9,13,"PER"),
+                                ChunkFactory.createChunk(17,27,"LOC"));
+            else
+                return null;
+        }
+        Chunking chunking(String text, Chunk... chunks) {
+            ChunkingImpl chunking = new ChunkingImpl(text);
+            for (Chunk chunk : chunks) 
+                chunking.add(chunk);
+            return chunking;
+        }
+        
+    }
+
+}

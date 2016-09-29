@@ -1,0 +1,22 @@
+namespace my.test;//包名
+
+attribute "priority";
+
+/** 性别 */
+enum Gender:byte (bit_flags) { Male = 0, Female = 1, }
+
+/**人物*/
+table Person {
+  name:string;
+  gender:Gender;
+  age:int;
+}
+  
+/**班级*/
+table Klass {
+  name:string (id: 0);
+  students:[Person] (id: 1);
+  teacher:Person (id: 2);
+}
+
+root_type Klass;
