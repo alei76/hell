@@ -132,10 +132,10 @@ public class RankALS extends IterativeRecommender {
 			}
 
 			// Q step: update item vectors
-			Map<Integer, Double> m_sum_sr = new HashMap<>();
-			Map<Integer, Double> m_sum_cr = new HashMap<>();
-			Map<Integer, Double> m_sum_c = new HashMap<>();
-			Map<Integer, DenseVector> m_sum_cq = new HashMap<>();
+			Map<Integer, Double> m_sum_sr = new HashMap<Integer, Double>();
+			Map<Integer, Double> m_sum_cr = new HashMap<Integer, Double>();
+			Map<Integer, Double> m_sum_c = new HashMap<Integer, Double>();
+			Map<Integer, DenseVector> m_sum_cq = new HashMap<Integer, DenseVector>();
 
 			for (int u : cus) {
 				SparseVector Ru = trainMatrix.row(u);

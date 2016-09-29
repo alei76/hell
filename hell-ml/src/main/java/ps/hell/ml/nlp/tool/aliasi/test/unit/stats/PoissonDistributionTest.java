@@ -3,7 +3,6 @@ package ps.hell.ml.nlp.tool.aliasi.test.unit.stats;
 import ps.hell.ml.nlp.tool.aliasi.stats.PoissonDistribution;
 import org.junit.Test;
 
-import static junit.framework.Assert.*;
 import static org.junit.Assert.*;
 
 public class PoissonDistributionTest  {

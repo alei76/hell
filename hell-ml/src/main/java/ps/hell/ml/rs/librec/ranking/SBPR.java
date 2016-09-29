@@ -65,7 +65,7 @@ public class SBPR extends SocialRecommender {
 		userItemsCache = trainMatrix.rowColumnsCache(cacheSpec);
 
 		// find items rated by trusted neighbors only
-		SP = new HashMap<>();
+		SP = new HashMap<Integer, List<Integer>>();
 
 		for (int u = 0, um = trainMatrix.numRows(); u < um; u++) {
 			List<Integer> uRatedItems = userItemsCache.get(u);

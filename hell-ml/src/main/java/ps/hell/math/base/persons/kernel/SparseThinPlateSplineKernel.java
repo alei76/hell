@@ -16,8 +16,8 @@
 
 package ps.hell.math.base.persons.kernel;
 
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.SparseArray;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.struct.SparseArray;
 
 import java.util.Iterator;
 

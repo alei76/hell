@@ -16,8 +16,9 @@
 package ps.hell.base.data.test;
 
 import org.junit.*;
-import ps.landerbuluse.ml.data.SparseDataset;
-import ps.landerbuluse.ml.math.matrix.SparseMatrix;
+import ps.hell.base.data.SparseDataset;
+import ps.hell.math.base.matrix.SparseMatrix;
+import static org.junit.Assert.assertEquals;
 
 /**
  *

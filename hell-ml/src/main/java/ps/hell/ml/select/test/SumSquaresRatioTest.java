@@ -16,14 +16,14 @@
 package ps.hell.ml.select.test;
 
 import org.junit.*;
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.NominalAttribute;
-import ps.landerbuluse.ml.data.parse.ArffParser;
-import ps.landerbuluse.ml.data.parse.DelimitedTextParser;
-import ps.landerbuluse.ml.feature.select.SumSquaresRatio;
-import ps.landerbuluse.ml.forest.classification.LDA;
-import ps.landerbuluse.ml.statistics.validation.Accuracy;
-import ps.landerbuluse.struct.store.sort.QuickSort;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.NominalAttribute;
+import ps.hell.base.data.parse.ArffParser;
+import ps.hell.base.data.parse.DelimitedTextParser;
+import ps.hell.ml.feature.select.SumSquaresRatio;
+import ps.hell.ml.forest.classification.LDA;
+import ps.hell.ml.statistics.validation.Accuracy;
+import ps.hell.base.sort.QuickSort;
 
 import static org.junit.Assert.assertEquals;
 

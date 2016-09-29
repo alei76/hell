@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/hell-api/hell-api.iml" filepath="$PROJECT_DIR$/hell-api/hell-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/hell-ml/hell-ml.iml" filepath="$PROJECT_DIR$/hell-ml/hell-ml.iml" />
       <module fileurl="file://$PROJECT_DIR$/hell-server/hell-server.iml" filepath="$PROJECT_DIR$/hell-server/hell-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/landerbuluse/landerbuluse.iml" filepath="$PROJECT_DIR$/landerbuluse/landerbuluse.iml" />
     </modules>
   </component>
 </project>

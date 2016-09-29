@@ -16,8 +16,6 @@ import java.util.Random;
 import java.util.SortedSet;
 
 import static ps.hell.ml.nlp.tool.aliasi.test.unit.Asserts.succeed;
-import static junit.framework.Assert.*;
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.*;
 
 

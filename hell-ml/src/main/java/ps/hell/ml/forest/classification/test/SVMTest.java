@@ -22,15 +22,15 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.NominalAttribute;
-import ps.landerbuluse.ml.data.parse.ArffParser;
-import ps.landerbuluse.ml.data.parse.DelimitedTextParser;
-import ps.landerbuluse.ml.forest.classification.SVM;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.kernel.GaussianKernel;
-import ps.landerbuluse.ml.math.kernel.LinearKernel;
-import ps.landerbuluse.ml.math.kernel.PolynomialKernel;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.NominalAttribute;
+import ps.hell.base.data.parse.ArffParser;
+import ps.hell.base.data.parse.DelimitedTextParser;
+import ps.hell.ml.forest.classification.SVM;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.persons.kernel.GaussianKernel;
+import ps.hell.math.base.persons.kernel.LinearKernel;
+import ps.hell.math.base.persons.kernel.PolynomialKernel;
 import static org.junit.Assert.*;
 
 /**

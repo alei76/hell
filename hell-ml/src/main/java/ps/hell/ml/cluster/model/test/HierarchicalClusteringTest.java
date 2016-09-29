@@ -21,20 +21,20 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.cluster.model.HierarchicalClustering;
-import ps.landerbuluse.ml.cluster.model.linkage.CompleteLinkage;
-import ps.landerbuluse.ml.cluster.model.linkage.SingleLinkage;
-import ps.landerbuluse.ml.cluster.model.linkage.UPGMALinkage;
-import ps.landerbuluse.ml.cluster.model.linkage.UPGMCLinkage;
-import ps.landerbuluse.ml.cluster.model.linkage.WPGMALinkage;
-import ps.landerbuluse.ml.cluster.model.linkage.WPGMCLinkage;
-import ps.landerbuluse.ml.cluster.model.linkage.WardLinkage;
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.NominalAttribute;
-import ps.landerbuluse.ml.data.parse.DelimitedTextParser;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.statistics.validation.AdjustedRandIndex;
-import ps.landerbuluse.ml.statistics.validation.RandIndex;
+import ps.hell.ml.cluster.model.HierarchicalClustering;
+import ps.hell.ml.cluster.model.linkage.CompleteLinkage;
+import ps.hell.ml.cluster.model.linkage.SingleLinkage;
+import ps.hell.ml.cluster.model.linkage.UPGMALinkage;
+import ps.hell.ml.cluster.model.linkage.UPGMCLinkage;
+import ps.hell.ml.cluster.model.linkage.WPGMALinkage;
+import ps.hell.ml.cluster.model.linkage.WPGMCLinkage;
+import ps.hell.ml.cluster.model.linkage.WardLinkage;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.NominalAttribute;
+import ps.hell.base.data.parse.DelimitedTextParser;
+import ps.hell.math.base.MathBase;
+import ps.hell.ml.statistics.validation.AdjustedRandIndex;
+import ps.hell.ml.statistics.validation.RandIndex;
 import static org.junit.Assert.*;
 
 /**

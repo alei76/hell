@@ -22,8 +22,8 @@ import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import ps.hell.ml.data.AttributeDataset;
-import ps.hell.ml.data.parse.microarray.RESParser;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.parse.microarray.RESParser;
 import ps.hell.util.plot.Contour;
 import ps.hell.util.plot.Heatmap;
 import ps.hell.util.plot.Palette;

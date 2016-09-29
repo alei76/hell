@@ -16,8 +16,8 @@
 
 package ps.hell.ml.forest.regression;
 
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.matrix.decomposition.CholeskyDecomposition2;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.matrix.decomposition.CholeskyDecomposition2;
 
 
 /**

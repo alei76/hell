@@ -17,13 +17,13 @@ package ps.hell.ml.forest.regression;
 
 import java.util.Arrays;
 
-import ps.landerbuluse.ml.data.Attribute;
-import ps.landerbuluse.ml.data.NumericAttribute;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.statistics.validation.RMSE;
-import ps.landerbuluse.ml.statistics.validation.RegressionMeasure;
-import ps.landerbuluse.ml.util.MlUtils;
-import ps.landerbuluse.struct.store.sort.QuickSelect;
+import ps.hell.base.data.Attribute;
+import ps.hell.base.data.NumericAttribute;
+import ps.hell.math.base.MathBase;
+import ps.hell.ml.statistics.validation.RMSE;
+import ps.hell.ml.statistics.validation.RegressionMeasure;
+import ps.hell.ml.util.MlUtils;
+import ps.hell.base.sort.QuickSelect;
 
 
 /**
@@ -531,7 +531,6 @@ public class GradientTreeBoost implements Regression<double[]> {
         double delta;
         /**
          * Constructor.
-         * @param r response to fit.
          */
         public HuberNodeOutput(double[] residual, double[] response, double alpha) {
             this.residual = residual;

@@ -16,11 +16,11 @@
 
 package ps.hell.ml.forest.regression;
 
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.kernel.MercerKernel;
-import ps.landerbuluse.ml.math.matrix.decomposition.CholeskyDecomposition2;
-import ps.landerbuluse.ml.math.matrix.decomposition.EigenValueDecomposition2;
-import ps.landerbuluse.ml.math.matrix.decomposition.LUDecomposition2;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.persons.kernel.MercerKernel;
+import ps.hell.math.base.matrix.decomposition.CholeskyDecomposition2;
+import ps.hell.math.base.matrix.decomposition.EigenValueDecomposition2;
+import ps.hell.math.base.matrix.decomposition.LUDecomposition2;
 
 
 /**

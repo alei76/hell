@@ -86,7 +86,7 @@ public class WordKmeans {
             this.center = center.clone();
         }
 
-        Map<String, Double> values = new HashMap<>();
+        Map<String, Double> values = new HashMap<String, Double>();
 
         public double distance(float[] value) {
             double sum = 0;

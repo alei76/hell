@@ -1,9 +1,9 @@
 package ps.hell.ml.forest.classification.decisionTree.kd;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
-import ps.landerbuluse.ml.math.MathBase;
-import scala.actors.threadpool.Arrays;
+import ps.hell.math.base.MathBase;
 
 /**
  * kd tree

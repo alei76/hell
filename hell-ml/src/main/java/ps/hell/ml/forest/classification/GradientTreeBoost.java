@@ -17,13 +17,13 @@ package ps.hell.ml.forest.classification;
 
 import java.util.Arrays;
 
-import ps.landerbuluse.ml.data.Attribute;
-import ps.landerbuluse.ml.data.NumericAttribute;
-import ps.landerbuluse.ml.forest.regression.RegressionTree;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.statistics.validation.Accuracy;
-import ps.landerbuluse.ml.statistics.validation.ClassificationMeasure;
-import ps.landerbuluse.ml.util.MlUtils;
+import ps.hell.base.data.Attribute;
+import ps.hell.base.data.NumericAttribute;
+import ps.hell.ml.forest.regression.RegressionTree;
+import ps.hell.math.base.MathBase;
+import ps.hell.ml.statistics.validation.Accuracy;
+import ps.hell.ml.statistics.validation.ClassificationMeasure;
+import ps.hell.ml.util.MlUtils;
 
 
 /**

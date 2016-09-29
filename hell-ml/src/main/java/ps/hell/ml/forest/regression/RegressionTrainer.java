@@ -15,7 +15,7 @@
  *******************************************************************************/
 package ps.hell.ml.forest.regression;
 
-import ps.landerbuluse.ml.data.Attribute;
+import ps.hell.base.data.Attribute;
 
 
 /**

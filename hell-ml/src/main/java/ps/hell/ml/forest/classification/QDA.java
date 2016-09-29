@@ -18,8 +18,8 @@ package ps.hell.ml.forest.classification;
 
 import java.util.Arrays;
 
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.matrix.decomposition.EigenValueDecomposition2;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.matrix.decomposition.EigenValueDecomposition2;
 
 /**
  * 二次判别分析。线性判别QDA密切相关

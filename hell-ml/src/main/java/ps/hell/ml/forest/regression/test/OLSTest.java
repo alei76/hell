@@ -22,12 +22,12 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.parse.ArffParser;
-import ps.landerbuluse.ml.forest.regression.OLS;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.statistics.validation.CrossValidation;
-import ps.landerbuluse.ml.statistics.validation.LOOCV;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.parse.ArffParser;
+import ps.hell.ml.forest.regression.OLS;
+import ps.hell.math.base.MathBase;
+import ps.hell.ml.statistics.validation.CrossValidation;
+import ps.hell.ml.statistics.validation.LOOCV;
 import static org.junit.Assert.*;
 
 /**

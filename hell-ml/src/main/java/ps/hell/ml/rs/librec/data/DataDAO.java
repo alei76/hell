@@ -179,7 +179,7 @@ public class DataDAO {
 	}
 
 	/**
-	 * @param isCCSUsed
+	 * @param binThold
 	 *            whether to construct CCS structures while reading data
 	 */
 	public SparseMatrix[] readData(double binThold) throws Exception {
@@ -267,7 +267,7 @@ public class DataDAO {
 		br.close();
 
 		numRatings = scaleDist.size();
-		ratingScale = new ArrayList<>(scaleDist.elementSet());
+		ratingScale = new ArrayList<Double>(scaleDist.elementSet());
 		Collections.sort(ratingScale);
 
 		int numRows = numUsers(), numCols = numItems();

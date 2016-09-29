@@ -49,7 +49,7 @@ public class HistogramDemo extends JPanel {
             data[j] = 0.01 * x * z;
         }
 
-        PlotCanvas canvas = Histogram.plot("Dataset 1", data, ps.landerbuluse.ml.math.Histogram.breaks(-6/100., 6/100., 30));
+        PlotCanvas canvas = Histogram.plot("Dataset 1", data, ps.hell.math.base.struct.Histogram.breaks(-6/100., 6/100., 30));
         canvas.setTitle("Overlapped Histogram");
         add(canvas);
 
@@ -66,7 +66,7 @@ public class HistogramDemo extends JPanel {
             data[j] = 0.01 *( 2 + x * z);
         }
 
-        canvas.histogram("Dataset 2", data, ps.hell.ml.math.Histogram.breaks(-6/100., 6/100., 30), Color.RED);
+        canvas.histogram("Dataset 2", data, ps.hell.math.base.struct.Histogram.breaks(-6/100., 6/100., 30), Color.RED);
 
         double[] prob = {0.2, 0.3, 0.1, 0.05, 0.2, 0.15};
         int[] data2 = MathBase.random(prob, 1000);

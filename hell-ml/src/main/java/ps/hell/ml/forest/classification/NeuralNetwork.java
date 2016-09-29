@@ -15,7 +15,7 @@
  *******************************************************************************/
 package ps.hell.ml.forest.classification;
 
-import ps.landerbuluse.ml.math.MathBase;
+import ps.hell.math.base.MathBase;
 
 /**
  * 多层感知器神经网络。

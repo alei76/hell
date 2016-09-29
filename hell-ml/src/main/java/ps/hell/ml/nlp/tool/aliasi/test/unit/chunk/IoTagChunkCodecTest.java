@@ -14,7 +14,6 @@ import java.io.Serializable;
 import java.util.*;
 
 import static ps.hell.ml.nlp.tool.aliasi.test.unit.Asserts.succeed;
-import static junit.framework.Assert.*;
 import static org.junit.Assert.*;
 public class IoTagChunkCodecTest {
 

@@ -2,7 +2,7 @@ package ps.hell.ml.forest.classification.temp;
 
 import java.util.ArrayList;
 
-import ps.landerbuluse.struct.store.sort.AllSort;
+import ps.hell.base.sort.AllSort;
 
 /**
  * knn最近邻算法

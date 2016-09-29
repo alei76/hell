@@ -15,7 +15,7 @@
  *******************************************************************************/
 package ps.hell.ml.forest.classification;
 
-import ps.landerbuluse.ml.statistics.distibution.Distribution;
+import ps.hell.ml.statistics.distibution.Distribution;
 
 /**
  * Naive Bayes classifier. A naive Bayes classifier is a simple probabilistic

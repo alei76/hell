@@ -42,7 +42,7 @@ public class SizeOfObject {
      */  
     public static long fullSizeOf(Object objP) throws IllegalAccessException {  
         Set<Object> visited = new HashSet<Object>();  
-        Deque<Object> toBeQueue = new ArrayDeque<>();  
+        Deque<Object> toBeQueue = new ArrayDeque<Object>();
         toBeQueue.add(objP);  
         long size = 0L;  
         while (toBeQueue.size() > 0) {  

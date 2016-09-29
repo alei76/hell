@@ -15,7 +15,7 @@
  *******************************************************************************/
 package ps.hell.math.base.persons.kernel;
 
-import ps.landerbuluse.ml.math.MathBase;
+import ps.hell.math.base.MathBase;
 
 
 /**

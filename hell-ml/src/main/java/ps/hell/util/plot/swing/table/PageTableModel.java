@@ -23,7 +23,7 @@ import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 import javax.swing.table.AbstractTableModel;
 
-import ps.landerbuluse.util.plot.swing.Button;
+import ps.hell.util.plot.swing.Button;
 
 /**
  * A table model that performs "paging" of its data. This model

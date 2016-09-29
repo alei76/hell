@@ -57,7 +57,7 @@ public class UserContext extends Context {
 	 */
 	public void addSocial(int user, double val) {
 		if (socialMap == null)
-			socialMap = new HashMap<>();
+			socialMap = new HashMap<Integer, Double>();
 
 		socialMap.put(user, val);
 	}

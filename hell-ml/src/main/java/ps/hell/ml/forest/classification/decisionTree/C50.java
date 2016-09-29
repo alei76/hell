@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map.Entry;
 
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.MathBase.MathTable;
-import ps.landerbuluse.ml.math.matrix.Matrix;
-import ps.landerbuluse.ml.statistics.base.Normal;
-import ps.landerbuluse.struct.store.struct.TableTree;
-import ps.landerbuluse.struct.store.struct.TableTree.Node;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.MathBase.MathTable;
+import ps.hell.math.base.matrix.Matrix;
+import ps.hell.ml.statistics.base.Normal;
+import ps.hell.base.struct.TableTree;
+import ps.hell.base.struct.TableTree.Node;
 
 
 public class C50 {
@@ -109,8 +109,8 @@ public class C50 {
 	}
 	/**
 	 * c50向下搜索方法
-	 * @param input
-	 * @param output
+	 * @param inputDataToInt
+	 * @param inputDataString
 	 * @param deep 深度
 	 * @param node null为根节点无 否则 向下添加子节点
 	 * @param dataMap 为动态调整的结构 而跟节点上的dataMap不变 
@@ -541,176 +541,3 @@ public class C50 {
 	}
 	
 }
-/*
-#c50决策树作为商业版本的决策树，尤其高效的速度和，更加符合理论意义的分类方式
-#信息熵，信息熵增益率作为样本数据的分支方式，下文中没有对连续型变量做输入，可以参考chimerge转化为分类型变量
-#如果想转变为2叉树形式可以参考以gini或者信息熵增益率作为分类方式
-#最终形成的分类数做减枝的参考是子误差加权后比父误差要小，则分类延续，否则剪枝
-#w1=matrix(sign(rnorm(120)),15,8,1)
-info_entropy<-function(x,y)#条件熵/信息熵增益率#分类型
-{
-#print(x);
-#print(y);
-z=as.matrix(cbind(x,y));
-n=ncol(z);
-m_test=c();
-m2=c();
-m_sel=c();
-m_sel2=c();
-m_test2=c();
-m_sel3=c();
-m_rat=c();
-for(i in 1:(n-1))
- {
-  m2<-NULL;
-  m2=ftable(z[,n],z[,i]);
-  m_test=m2/rep(colSums(m2),each=nrow(m2));#对应的条件概率
-  m_test2=rep(colSums(m2)/(sum(m2)),each=nrow(m2))*(-m_test*log(base=2,m_test));#对应条件熵
-  m_test2[which(is.nan(m_test2))]<-0;
-  #条件熵
-  m_sel<-sum(m_test2);
-  #信息熵y
-  m_test0<-table(z[,n]);
-  m_sel2<-(-m_test0/sum(m_test0)*(log(base=2,m_test0/sum(m_test0))));
-  m_sel2[which(is.nan(m_sel2))]<-0;
-  m_sel2<-sum(m_sel2);
-  #信息熵x
-  m_test0<-table(z[,i]);
-  m_sel3<--m_test0/sum(m_test0)*(log(base=2,m_test0/sum(m_test0)));
-  m_sel3[which(is.nan(m_sel3))]<-0;
-  m_sel3=sum(m_sel3);
-  #信息熵增益
-  if((m_sel2-m_sel)==0 & m_sel3==0)
-  {
-  m_rat=append(m_rat,10000);
-  }
-  else
-  {
-  #print((m_sel2-m_sel)/m_sel3);
-  m_rat=append(m_rat,(m_sel2-m_sel)/(m_sel3+1e-10));
-  #print("m_rat");
-  #print(m_rat);
-  }
- }
-return(m_rat)
-}
-
- 
-
-error_emite<-function(x,y)#计算加权误差x,y为vector
-{
-ei<-c();
-ei0<-apply(table(x,y),1,function(x) which.max(x));#获取众数为正确预测
-ei1<-apply(table(x,y),1,sum);
-#print(paste("length(ei0):",length(ei0)));
-for(i in 1:length(ei0))
- {
- ei=append(ei,ei1[i]-table(x,y)[i,ei0[i]]);
- #print(ei);
- }
-ni<-length(x[!is.na(x)]);
-error1=ei/ni+sqrt(ei/ni*(1-ei/ni)/ni);
-#print(error1*(ni/sum(ni)));
-return<-sum(error1*(ni/sum(ni)));#加权误差
-}
-#error_emite(m3[,5],m3[,6]);
-
-
-#ifelse对矩阵无效替换函数
-ifelse1<-function(test,yes,no)
-{
-c=c();
-if(test==T)
-{
-c=yes;
-c;
-}
-else
-{ no;}
-}
-
-
-son_father<-function(xn,yn,son_fa=1,kk=1,choice1)
-{
-kk=kk+1;
-x<-as.matrix(xn);
-y<-as.matrix(yn);
-info_descsion=c();
-info_set<-c();
-info_set2<-c();
-error_son<-c();
-set0<-c();
- info_descsion<-info_entropy(x,y);
- info_set<-which.max(info_descsion);#获取信息增益最大的列组
-
- info_set2<-unique(as.vector(x[,info_set]));#获取分组 
- x2=t(t(x[, -info_set]));
- error_son<-error_emite(x[,info_set],y);#获取已定子节点的所有误差
- #比较父节点和子节点的误差
- nc=ncol(x2);
-
- if(all(is.na(x2)))
- {
- nc=0;
- }
- if(son_fa>error_son & nc==0)#如果是最后一个则输出
- {
- print(paste("分类树底层结点 , ",info_set," , 父亲偏差:",son_fa,
-   " , 孩子偏差：",error_son," 深度:",kk," 分枝条件条件：",choice1,sep=""));
- }
- else 
- {
-  if(son_fa<error_son & nc!=0)
-  {
-   print(paste("无子结点 , ",info_set," , 父亲偏差:" ,son_fa,
-    ", 孩子偏差：",error_son," 深度:",kk," 分枝条件：","无",sep=""));
-  }
-
-  else 
-   {
-   if(son_fa<error_son & nc==0)
-    {
-     print(paste("分类树底层无结点 , ",info_set," , 父亲偏差:" ,son_fa,
-      ", 孩子偏差：",error_son," 深度:",kk," 分枝条件：","无",sep=""));
- 
-    }
-   else  
-    {
-    if(son_fa>error_son & nc!=0)#判断误差分支条件并执行是否继续分枝
-    {
-     
-     for(i in 1:length(info_set2))#获取已定子节点的所有误差
-     { 
-      print(paste("连续结点 , ",info_set," , 父亲偏差:" ,son_fa,
-       ", 孩子偏差：",error_son," 深度:",kk," 分枝条件：",info_set2[i],sep=""));
-     
-      set0<-which(x[,info_set]==info_set2[i]);#获取分组i
-
-      y1<-y[set0];
-
-      x3<-x[set0,info_set];#父节点的下x2为剩下的  
-      error_father1<-error_emite(x3,y1);#计算分支误差父节点
-   
-      fuzhi<-son_father(ifelse1(test=(length(set0)==1),yes=t(as.matrix(x2[set0,])),no=x2[set0,]),y1,son_fa=error_father1,kk=kk,choice1=info_set[i]);#n差树循环
-     }     
-    }
-
-   }
-  }
- }
-}
-
- 
-
-c501<-function(x,y)#分类型
-{
-x1<-as.matrix(x);
-#计算当前层的误差
-son_father(x1,y);
-}
-
-
-# c501(m3[,1:5],m3[,6])
-w1=matrix(sign(rnorm(60000)),3000,20,1);
-c501(w1[,1:19],w1[,20]);
-*/

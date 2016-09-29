@@ -21,12 +21,12 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.cluster.model.Clustering;
-import ps.landerbuluse.ml.cluster.model.DBScan;
-import ps.landerbuluse.ml.neighbor.KDTree;
-import ps.landerbuluse.ml.statistics.distibution.MultivariateGaussianDistribution;
-import ps.landerbuluse.ml.statistics.validation.AdjustedRandIndex;
-import ps.landerbuluse.ml.statistics.validation.RandIndex;
+import ps.hell.ml.cluster.model.Clustering;
+import ps.hell.ml.cluster.model.DBScan;
+import ps.hell.ml.neighbor.KDTree;
+import ps.hell.ml.statistics.distibution.MultivariateGaussianDistribution;
+import ps.hell.ml.statistics.validation.AdjustedRandIndex;
+import ps.hell.ml.statistics.validation.RandIndex;
 import static org.junit.Assert.*;
 
 /**

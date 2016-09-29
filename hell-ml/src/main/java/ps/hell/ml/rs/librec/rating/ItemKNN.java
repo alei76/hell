@@ -83,7 +83,7 @@ public class ItemKNN extends Recommender {
 	protected double predict(int u, int j) {
 
 		// find a number of similar items
-		Map<Integer, Double> nns = new HashMap<>();
+		Map<Integer, Double> nns = new HashMap<Integer, Double>();
 
 		SparseVector dv = itemCorrs.row(j);
 		for (int i : dv.getIndex()) {

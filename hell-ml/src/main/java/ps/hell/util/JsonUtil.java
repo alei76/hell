@@ -52,12 +52,10 @@ public class JsonUtil {
 	/**
 	 * 
 	 * 
-	 * @param jsonObjStr
+	 * @param collectionClass
 	 *            e.g. {'data':[{'name':'get'},{'name':'set'}]}
-	 * @param clazz
+	 * @param elementClasses
 	 *            e.g. MyBean.class
-	 * @param classMap
-	 *            e.g. classMap.put("data", Person.class)
 	 * @return Object
 	 */
 	// @SuppressWarnings("rawtypes")
@@ -212,8 +210,7 @@ public class JsonUtil {
 
 	/**
 	 * 解析字符串
-	 * 
-	 * @param str
+	 *
 	 * @return
 	 */
 	public static ObjectNode init() {
@@ -228,8 +225,7 @@ public class JsonUtil {
 
 	/**
 	 * 解析字符串
-	 * 
-	 * @param str
+	 *
 	 * @return
 	 */
 	public static ArrayNode initArray() {

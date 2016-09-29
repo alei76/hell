@@ -25,11 +25,11 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.NominalAttribute;
-import ps.landerbuluse.ml.data.parse.ArffParser;
-import ps.landerbuluse.ml.data.parse.DelimitedTextParser;
-import ps.landerbuluse.ml.forest.classification.KNN;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.NominalAttribute;
+import ps.hell.base.data.parse.ArffParser;
+import ps.hell.base.data.parse.DelimitedTextParser;
+import ps.hell.ml.forest.classification.KNN;
 import static org.junit.Assert.*;
 
 /**

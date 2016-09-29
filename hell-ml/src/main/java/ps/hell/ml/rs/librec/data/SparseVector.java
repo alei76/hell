@@ -134,7 +134,7 @@ public class SparseVector implements Iterable<VectorEntry>, Serializable {
 	 * @return a list of indices (to prevent changes outside)
 	 */
 	public List<Integer> getIndexList() {
-		List<Integer> res = new ArrayList<>((int) (count * 1.5));
+		List<Integer> res = new ArrayList<Integer>((int) (count * 1.5));
 		for (int i = 0; i < count; i++)
 			res.add(index[i]);
 

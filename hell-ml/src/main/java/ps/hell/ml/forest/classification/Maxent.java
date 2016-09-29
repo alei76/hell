@@ -21,9 +21,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import ps.landerbuluse.ml.math.DifferentiableMultivariateFunction;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.util.MulticoreExecutor;
+import ps.hell.math.base.struct.DifferentiableMultivariateFunction;
+import ps.hell.math.base.MathBase;
+import ps.hell.ml.util.MulticoreExecutor;
 
 /**
  * 最大熵分类器。最大熵是一种对学习的技术

@@ -3,7 +3,6 @@ package ps.hell.ml.nlp.tool.aliasi.test.unit.stats;
 import ps.hell.ml.nlp.tool.aliasi.stats.MultivariateDistribution;
 import org.junit.Test;
 
-import static junit.framework.Assert.*;
 import static org.junit.Assert.*;
 
 public class MultivariateDistributionTest  {

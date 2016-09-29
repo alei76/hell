@@ -17,12 +17,12 @@
 package ps.hell.ml.select.test;
 
 import org.junit.*;
-import ps.landerbuluse.ml.data.Attribute;
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.parse.ArffParser;
-import ps.landerbuluse.ml.feature.select.FeatureSet;
-import ps.landerbuluse.ml.feature.select.Nominal2Binary;
-import ps.landerbuluse.ml.feature.select.NumericAttributeFeature;
+import ps.hell.base.data.Attribute;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.parse.ArffParser;
+import ps.hell.ml.feature.select.FeatureSet;
+import ps.hell.ml.feature.select.Nominal2Binary;
+import ps.hell.ml.feature.select.NumericAttributeFeature;
 
 import static org.junit.Assert.assertEquals;
 

@@ -17,10 +17,10 @@
 package ps.hell.math.base.persons.test;
 
 import org.junit.*;
-import ps.landerbuluse.ml.math.Complex;
+import ps.hell.math.base.struct.Complex;
 
 import static org.junit.Assert.assertTrue;
-
+import static org.junit.Assert.assertEquals;
 /**
  *
  * @author Haifeng Li

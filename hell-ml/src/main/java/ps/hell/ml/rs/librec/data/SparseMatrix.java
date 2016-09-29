@@ -373,7 +373,7 @@ public class SparseMatrix implements Iterable<MatrixEntry>, Serializable {
 	 * @return a list of column index
 	 */
 	public List<Integer> getColumns(int row) {
-		List<Integer> res = new ArrayList<>();
+		List<Integer> res = new ArrayList<Integer>();
 
 		if (row < numRows) {
 			for (int j = rowPtr[row]; j < rowPtr[row + 1]; j++) {

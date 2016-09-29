@@ -17,9 +17,9 @@
 package ps.hell.ml.sequence.test;
 
 import org.junit.*;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.sequence.HMM;
-import ps.landerbuluse.ml.statistics.distibution.EmpiricalDistribution;
+import ps.hell.math.base.MathBase;
+import ps.hell.ml.sequence.HMM;
+import ps.hell.ml.statistics.distibution.EmpiricalDistribution;
 
 import static org.junit.Assert.assertEquals;
 

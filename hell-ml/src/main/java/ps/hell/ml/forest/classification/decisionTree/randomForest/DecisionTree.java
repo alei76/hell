@@ -42,7 +42,7 @@ public class DecisionTree {
         // 在本决策树中对应的查询的属性值描述
         ArrayList<String[]> featureStrs;
  
-        featureStrs = new ArrayList<>();
+        featureStrs = new ArrayList<String[]>();
         queryFeatures = features.split(",");
  
         String[] array;

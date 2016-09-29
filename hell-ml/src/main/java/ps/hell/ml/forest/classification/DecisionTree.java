@@ -21,12 +21,12 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.concurrent.Callable;
 
-import ps.landerbuluse.ml.data.Attribute;
-import ps.landerbuluse.ml.data.NominalAttribute;
-import ps.landerbuluse.ml.data.NumericAttribute;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.util.MulticoreExecutor;
-import ps.landerbuluse.struct.store.sort.QuickSort;
+import ps.hell.base.data.Attribute;
+import ps.hell.base.data.NominalAttribute;
+import ps.hell.base.data.NumericAttribute;
+import ps.hell.math.base.MathBase;
+import ps.hell.ml.util.MulticoreExecutor;
+import ps.hell.base.sort.QuickSort;
 
 
 /**

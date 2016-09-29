@@ -21,11 +21,11 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.cluster.model.SIB;
-import ps.landerbuluse.ml.data.SparseDataset;
-import ps.landerbuluse.ml.data.parse.LibsvmParser;
-import ps.landerbuluse.ml.statistics.validation.AdjustedRandIndex;
-import ps.landerbuluse.ml.statistics.validation.RandIndex;
+import ps.hell.ml.cluster.model.SIB;
+import ps.hell.base.data.SparseDataset;
+import ps.hell.base.data.parse.LibsvmParser;
+import ps.hell.ml.statistics.validation.AdjustedRandIndex;
+import ps.hell.ml.statistics.validation.RandIndex;
 import static org.junit.Assert.*;
 
 /**

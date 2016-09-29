@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import ps.landerbuluse.ml.math.matrix.Matrix;
-import ps.landerbuluse.ml.statistics.base.Normal;
+import ps.hell.math.base.matrix.Matrix;
+import ps.hell.ml.statistics.base.Normal;
 
 /**
  * 主要是用在空间坐标中的 检索算法

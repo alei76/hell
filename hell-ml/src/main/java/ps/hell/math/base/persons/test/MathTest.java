@@ -16,13 +16,17 @@
 package ps.hell.math.base.persons.test;
 
 import org.junit.*;
-import ps.landerbuluse.ml.math.*;
-import ps.landerbuluse.ml.math.matrix.BandMatrix;
-import ps.landerbuluse.ml.math.matrix.Matrix;
-import ps.landerbuluse.ml.math.matrix.SparseMatrix;
-import ps.landerbuluse.ml.math.matrix.decomposition.EigenValueDecomposition2;
-import ps.landerbuluse.ml.math.matrix.decomposition.LUDecomposition2;
-import ps.landerbuluse.ml.math.matrix.decomposition.SingularValueDecomposition2;
+import ps.hell.math.base.*;
+import ps.hell.math.base.matrix.BandMatrix;
+import ps.hell.math.base.matrix.Matrix;
+import ps.hell.math.base.matrix.SparseMatrix;
+import ps.hell.math.base.matrix.decomposition.EigenValueDecomposition2;
+import ps.hell.math.base.matrix.decomposition.LUDecomposition2;
+import ps.hell.math.base.matrix.decomposition.SingularValueDecomposition2;
+import ps.hell.math.base.struct.DifferentiableFunction;
+import ps.hell.math.base.struct.DifferentiableMultivariateFunction;
+import ps.hell.math.base.struct.Function;
+import ps.hell.math.base.struct.Histogram;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;

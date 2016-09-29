@@ -20,12 +20,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.Callable;
 
-import ps.landerbuluse.ml.math.DoubleArrayList;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.SparseArray;
-import ps.landerbuluse.ml.math.kernel.LinearKernel;
-import ps.landerbuluse.ml.math.kernel.MercerKernel;
-import ps.landerbuluse.ml.util.MulticoreExecutor;
+import ps.hell.math.base.struct.DoubleArrayList;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.struct.SparseArray;
+import ps.hell.math.base.persons.kernel.LinearKernel;
+import ps.hell.math.base.persons.kernel.MercerKernel;
+import ps.hell.ml.util.MulticoreExecutor;
 
 /**
  * Support vector machines for classification. The basic support vector machine

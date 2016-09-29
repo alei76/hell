@@ -17,9 +17,9 @@
 package ps.hell.ml.sequence.test;
 
 import org.junit.*;
-import ps.landerbuluse.ml.data.Attribute;
-import ps.landerbuluse.ml.data.NominalAttribute;
-import ps.landerbuluse.ml.sequence.CRF;
+import ps.hell.base.data.Attribute;
+import ps.hell.base.data.NominalAttribute;
+import ps.hell.ml.sequence.CRF;
 
 import java.io.BufferedReader;
 import java.io.IOException;

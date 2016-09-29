@@ -96,7 +96,7 @@ public class Word implements Comparable<Word> {
 	}
 	/**
 	 * 获取第n个字母是否为多音字
-	 * @param type
+	 * @param index
 	 * @return
 	 */
 	public boolean hasMultiPinyin(int index){

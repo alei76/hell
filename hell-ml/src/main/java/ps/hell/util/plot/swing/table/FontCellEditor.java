@@ -25,7 +25,7 @@ import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.table.TableCellEditor;
 
-import ps.landerbuluse.util.plot.swing.FontChooser;
+import ps.hell.util.plot.swing.FontChooser;
 
 /**
  * Font editor in JTable.

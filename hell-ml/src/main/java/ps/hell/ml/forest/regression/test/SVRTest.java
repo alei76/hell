@@ -22,12 +22,12 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.parse.ArffParser;
-import ps.landerbuluse.ml.forest.regression.SVR;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.kernel.PolynomialKernel;
-import ps.landerbuluse.ml.statistics.validation.CrossValidation;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.parse.ArffParser;
+import ps.hell.ml.forest.regression.SVR;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.persons.kernel.PolynomialKernel;
+import ps.hell.ml.statistics.validation.CrossValidation;
 
 /**
  *

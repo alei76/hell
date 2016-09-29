@@ -15,8 +15,8 @@
  *******************************************************************************/
 package ps.hell.ml.cluster.model;
 
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.matrix.decomposition.EigenValueDecomposition2;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.matrix.decomposition.EigenValueDecomposition2;
 
 
 /**

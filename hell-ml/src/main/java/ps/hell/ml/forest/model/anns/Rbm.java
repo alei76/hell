@@ -2,8 +2,8 @@ package ps.hell.ml.forest.model.anns;
 
 import java.util.ArrayList;
 
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.matrix.Matrix;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.matrix.Matrix;
 
 
 /**

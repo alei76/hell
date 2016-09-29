@@ -81,7 +81,7 @@ public class Redis implements CursorInter {
 	 *            最大活跃数
 	 * @param minIdle
 	 *            初始化最小连接数 要小于maxActive
-	 * @param 超时时间
+	 * @param PoolTimeOut 超时时间
 	 */
 	public Redis(String ip, int maxActive, int minIdle, int timeout,
 			int PoolTimeOut) {
@@ -1116,7 +1116,8 @@ public class Redis implements CursorInter {
 	/**
 	 * 将srckey 中的右侧第一个添加入dstkey 左侧第一个
 	 * 
-	 * @param key
+	 * @param srckey
+	 * @param dstkey
 	 */
 	public void rpoplpush(String srckey, String dstkey) throws Exception {
 
@@ -1511,7 +1512,7 @@ public class Redis implements CursorInter {
 	/**
 	 * 返回 zset中元素member的从小到大的排名
 	 * 
-	 * @param keys
+	 * @param key
 	 * @param member
 	 */
 	public long zrevRank(String key, String member) throws Exception {

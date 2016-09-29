@@ -22,13 +22,13 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.cluster.model.GrowingNeuralGas;
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.NominalAttribute;
-import ps.landerbuluse.ml.data.parse.DelimitedTextParser;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.statistics.validation.AdjustedRandIndex;
-import ps.landerbuluse.ml.statistics.validation.RandIndex;
+import ps.hell.ml.cluster.model.GrowingNeuralGas;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.NominalAttribute;
+import ps.hell.base.data.parse.DelimitedTextParser;
+import ps.hell.math.base.MathBase;
+import ps.hell.ml.statistics.validation.AdjustedRandIndex;
+import ps.hell.ml.statistics.validation.RandIndex;
 import static org.junit.Assert.*;
 
 /**

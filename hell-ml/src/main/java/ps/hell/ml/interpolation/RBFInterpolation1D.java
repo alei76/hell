@@ -15,10 +15,10 @@
  *******************************************************************************/
 package ps.hell.ml.interpolation;
 
-import ps.landerbuluse.ml.math.matrix.decomposition.CholeskyDecomposition2;
-import ps.landerbuluse.ml.math.matrix.decomposition.LUDecomposition2;
-import ps.landerbuluse.ml.math.rbf.GaussianRadialBasis;
-import ps.landerbuluse.ml.math.rbf.RadialBasisFunction;
+import ps.hell.math.base.matrix.decomposition.CholeskyDecomposition2;
+import ps.hell.math.base.matrix.decomposition.LUDecomposition2;
+import ps.hell.math.base.persons.rbf.GaussianRadialBasis;
+import ps.hell.math.base.persons.rbf.RadialBasisFunction;
 
 
 /**

@@ -22,9 +22,9 @@ import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import ps.landerbuluse.util.plot.Line;
-import ps.landerbuluse.util.plot.LinePlot;
-import ps.landerbuluse.util.plot.PlotCanvas;
+import ps.hell.util.plot.Line;
+import ps.hell.util.plot.LinePlot;
+import ps.hell.util.plot.PlotCanvas;
 
 
 /**

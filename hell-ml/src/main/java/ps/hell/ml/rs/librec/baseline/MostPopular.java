@@ -44,7 +44,7 @@ public class MostPopular extends Recommender {
 
 	@Override
 	protected void initModel() {
-		itemPops = new HashMap<>();
+		itemPops = new HashMap<Integer, Integer>();
 	}
 
 	@Override

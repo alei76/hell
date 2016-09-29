@@ -22,14 +22,14 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.cluster.model.KMeans;
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.parse.ArffParser;
-import ps.landerbuluse.ml.forest.regression.GaussianProcessRegression;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.kernel.GaussianKernel;
-import ps.landerbuluse.ml.statistics.validation.CrossValidation;
-import ps.landerbuluse.ml.statistics.validation.LOOCV;
+import ps.hell.ml.cluster.model.KMeans;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.parse.ArffParser;
+import ps.hell.ml.forest.regression.GaussianProcessRegression;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.persons.kernel.GaussianKernel;
+import ps.hell.ml.statistics.validation.CrossValidation;
+import ps.hell.ml.statistics.validation.LOOCV;
 
 /**
  *

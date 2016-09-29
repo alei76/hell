@@ -27,7 +27,7 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.forest.classification.Maxent;
+import ps.hell.ml.forest.classification.Maxent;
 import static org.junit.Assert.*;
 
 /**

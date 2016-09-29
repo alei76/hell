@@ -16,16 +16,16 @@
 package ps.hell.ml.select.test;
 
 import org.junit.*;
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.NominalAttribute;
-import ps.landerbuluse.ml.data.parse.DelimitedTextParser;
-import ps.landerbuluse.ml.feature.select.GAFeatureSelection;
-import ps.landerbuluse.ml.forest.classification.ClassifierTrainer;
-import ps.landerbuluse.ml.forest.classification.LDA;
-import ps.landerbuluse.ml.gap.BitString;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.statistics.validation.Accuracy;
-import ps.landerbuluse.ml.statistics.validation.ClassificationMeasure;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.NominalAttribute;
+import ps.hell.base.data.parse.DelimitedTextParser;
+import ps.hell.ml.feature.select.GAFeatureSelection;
+import ps.hell.ml.forest.classification.ClassifierTrainer;
+import ps.hell.ml.forest.classification.LDA;
+import ps.hell.ml.gap.BitString;
+import ps.hell.math.base.MathBase;
+import ps.hell.ml.statistics.validation.Accuracy;
+import ps.hell.ml.statistics.validation.ClassificationMeasure;
 
 import static org.junit.Assert.assertTrue;
 

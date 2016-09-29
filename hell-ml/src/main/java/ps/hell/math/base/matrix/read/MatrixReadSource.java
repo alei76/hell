@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-import ps.landerbuluse.ml.math.matrix.Matrix;
+import ps.hell.math.base.matrix.Matrix;
 /**
  * 读取矩阵包括所有信息放入矩阵中
  * @author Administrator

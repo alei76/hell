@@ -16,8 +16,8 @@
 
 package ps.hell.math.base.persons.kernel;
 
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.SparseArray;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.struct.SparseArray;
 
 /**
  * The polynomial kernel. k(u, v) = (&gamma; u<sup>T</sup>v - &lambda;)<sup>d</sup>,

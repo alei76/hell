@@ -21,15 +21,15 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.data.Attribute;
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.NominalAttribute;
-import ps.landerbuluse.ml.data.parse.ArffParser;
-import ps.landerbuluse.ml.data.parse.DelimitedTextParser;
-import ps.landerbuluse.ml.forest.classification.AdaBoost;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.statistics.validation.LOOCV;
-import ps.landerbuluse.struct.store.sort.QuickSort;
+import ps.hell.base.data.Attribute;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.NominalAttribute;
+import ps.hell.base.data.parse.ArffParser;
+import ps.hell.base.data.parse.DelimitedTextParser;
+import ps.hell.ml.forest.classification.AdaBoost;
+import ps.hell.math.base.MathBase;
+import ps.hell.ml.statistics.validation.LOOCV;
+import ps.hell.base.sort.QuickSort;
 import static org.junit.Assert.*;
 
 /**

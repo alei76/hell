@@ -16,10 +16,10 @@
 
 package ps.hell.ml.forest.regression;
 
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.matrix.decomposition.CholeskyDecomposition2;
-import ps.landerbuluse.ml.math.matrix.decomposition.QRDecomposition2;
-import ps.landerbuluse.ml.statistics.base.special.Beta;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.matrix.decomposition.CholeskyDecomposition2;
+import ps.hell.math.base.matrix.decomposition.QRDecomposition2;
+import ps.hell.ml.statistics.base.special.Beta;
 
 
 /**

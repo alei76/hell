@@ -90,7 +90,7 @@ public class GBPR extends SocialRecommender {
 
 				// g
 				List<Integer> ws = itemUsersCache.get(i); // column i
-				List<Integer> g = new ArrayList<>();
+				List<Integer> g = new ArrayList<Integer>();
 				if (ws.size() <= gLen) {
 					g.addAll(ws);
 				} else {

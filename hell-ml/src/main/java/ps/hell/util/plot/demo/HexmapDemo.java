@@ -24,10 +24,10 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import ps.hell.ml.cluster.model.SOM;
-import ps.hell.ml.data.AttributeDataset;
-import ps.hell.ml.data.NominalAttribute;
-import ps.hell.ml.data.parse.DelimitedTextParser;
-import ps.hell.ml.math.MathBase;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.NominalAttribute;
+import ps.hell.base.data.parse.DelimitedTextParser;
+import ps.hell.math.base.MathBase;
 import ps.hell.ml.mds.IsotonicMDS;
 import ps.hell.ml.mds.MDS;
 import ps.hell.ml.mds.SammonMapping;

@@ -17,8 +17,8 @@ package ps.hell.ml.forest.regression;
 
 import java.util.Arrays;
 
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.matrix.inter.IMatrix;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.matrix.inter.IMatrix;
 
 /**
  * 至少绝对收缩和选择算子。

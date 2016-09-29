@@ -23,7 +23,7 @@
  */
 package ps.hell.math.base.persons.rbf2;
 
-import ps.landerbuluse.ml.math.MathBase;
+import ps.hell.math.base.MathBase;
 
 
 /**

@@ -16,9 +16,9 @@
 package ps.hell.ml.select.test;
 
 import org.junit.*;
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.parse.ArffParser;
-import ps.landerbuluse.ml.feature.select.SignalNoiseRatio;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.parse.ArffParser;
+import ps.hell.ml.feature.select.SignalNoiseRatio;
 
 import static org.junit.Assert.assertEquals;
 

@@ -16,9 +16,9 @@
 package ps.hell.base.data.parse.microarray.test;
 
 import org.junit.*;
-import ps.landerbuluse.ml.data.Attribute;
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.parse.microarray.GCTParser;
+import ps.hell.base.data.Attribute;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.parse.microarray.GCTParser;
 
 import static org.junit.Assert.assertEquals;
 

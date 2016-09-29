@@ -16,7 +16,7 @@
 package ps.hell.ml.select.test;
 
 import org.junit.*;
-import ps.landerbuluse.ml.feature.select.Bag;
+import ps.hell.ml.feature.select.Bag;
 
 import java.io.BufferedReader;
 import java.io.IOException;

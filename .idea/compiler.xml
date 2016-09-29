@@ -24,13 +24,15 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="hell-api" />
+        <module name="hell-ml" />
+        <module name="hell-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
       <module name="hell" target="1.7" />
       <module name="hell-api" target="1.7" />
+      <module name="hell-ml" target="1.7" />
       <module name="hell-server" target="1.7" />
-      <module name="landerbuluse" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

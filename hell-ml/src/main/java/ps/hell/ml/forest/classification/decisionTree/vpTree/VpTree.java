@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Random;
 
-import ps.landerbuluse.ml.dist.base.EuclidDistanceSimilary;
-import ps.landerbuluse.ml.dist.base.inter.SimilaryFactory;
-import ps.landerbuluse.ml.forest.classification.decisionTree.quad.INDArray;
-import ps.landerbuluse.ml.forest.classification.decisionTree.quad.QuadTree;
-import ps.landerbuluse.ml.forest.classification.decisionTree.quad.XyPoint;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.matrix.Matrix;
-import ps.landerbuluse.ml.statistics.base.Normal;
+import ps.hell.ml.dist.base.EuclidDistanceSimilary;
+import ps.hell.ml.dist.base.inter.SimilaryFactory;
+import ps.hell.ml.forest.classification.decisionTree.quad.INDArray;
+import ps.hell.ml.forest.classification.decisionTree.quad.QuadTree;
+import ps.hell.ml.forest.classification.decisionTree.quad.XyPoint;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.matrix.Matrix;
+import ps.hell.ml.statistics.base.Normal;
 
 /**
  * 和kd-tree相似 不过是 使用距离作为度量 后选择media值做分割点
@@ -161,9 +161,7 @@ public class VpTree {
 	 * 
 	 * @param vp
 	 * @param da
-	 * @param isRoot
-	 * @param isRandom
-	 * @param useIndexToRoot
+	 * @param useIndex
 	 */
 	private void fill(VpTree vp, ArrayList<double[]> da, int useIndex) {
 		// 计算其他点域该点的距离

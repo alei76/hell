@@ -23,17 +23,17 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.data.AttributeDataset;
-import ps.landerbuluse.ml.data.NominalAttribute;
-import ps.landerbuluse.ml.data.parse.ArffParser;
-import ps.landerbuluse.ml.data.parse.DelimitedTextParser;
-import ps.landerbuluse.ml.distance.EuclideanDistance;
-import ps.landerbuluse.ml.forest.classification.RBFNetwork;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.rbf.GaussianRadialBasis;
-import ps.landerbuluse.ml.math.rbf.RadialBasisFunction;
-import ps.landerbuluse.ml.statistics.validation.LOOCV;
-import ps.landerbuluse.ml.util.MlUtils;
+import ps.hell.base.data.AttributeDataset;
+import ps.hell.base.data.NominalAttribute;
+import ps.hell.base.data.parse.ArffParser;
+import ps.hell.base.data.parse.DelimitedTextParser;
+import ps.hell.math.base.distance.EuclideanDistance;
+import ps.hell.ml.forest.classification.RBFNetwork;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.persons.rbf.GaussianRadialBasis;
+import ps.hell.math.base.persons.rbf.RadialBasisFunction;
+import ps.hell.ml.statistics.validation.LOOCV;
+import ps.hell.ml.util.MlUtils;
 import static org.junit.Assert.*;
 
 /**

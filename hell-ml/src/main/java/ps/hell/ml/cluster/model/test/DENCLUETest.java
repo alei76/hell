@@ -21,10 +21,10 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.cluster.model.DENCLUE;
-import ps.landerbuluse.ml.statistics.distibution.MultivariateGaussianDistribution;
-import ps.landerbuluse.ml.statistics.validation.AdjustedRandIndex;
-import ps.landerbuluse.ml.statistics.validation.RandIndex;
+import ps.hell.ml.cluster.model.DENCLUE;
+import ps.hell.ml.statistics.distibution.MultivariateGaussianDistribution;
+import ps.hell.ml.statistics.validation.AdjustedRandIndex;
+import ps.hell.ml.statistics.validation.RandIndex;
 import static org.junit.Assert.*;
 
 /**

@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map.Entry;
 
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.MathBase.MathTable;
-import ps.landerbuluse.struct.store.struct.TableTree;
-import ps.landerbuluse.struct.store.struct.TableTree.Node;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.MathBase.MathTable;
+import ps.hell.base.struct.TableTree;
+import ps.hell.base.struct.TableTree.Node;
 
 
 /**
@@ -131,8 +131,8 @@ public class C45 {
 	}
 	/**
 	 * c45向下搜索方法
-	 * @param input
-	 * @param output
+	 * @param inputDataToInt
+	 * @param inputDataString
 	 * @param deep 深度
 	 * @param node null为根节点无 否则 向下添加子节点
 	 * @param dataMap 为动态调整的结构 而跟节点上的dataMap不变 
@@ -312,7 +312,6 @@ public class C45 {
 	 * 从输入和输出中获取 最小gini系数的index列
 	 * @param in
 	 * @param out
-	 * @param inCount //改列有多少中类
 	 * @return
 	 */
 	public int getMinGiniIndex(int[][] in,int[] out)
@@ -471,8 +470,6 @@ public class C45 {
 	/**
 	 * 咖方值计算
 	 * @param arr
-	 * @param row
-	 * @param col
 	 * @return
 	 */
 	public double cal_chi(double[][] arr){

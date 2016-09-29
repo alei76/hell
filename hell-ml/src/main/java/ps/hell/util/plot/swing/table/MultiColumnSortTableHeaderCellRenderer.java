@@ -21,7 +21,7 @@ import javax.swing.JTable;
 import javax.swing.RowSorter;
 import javax.swing.UIManager;
 
-import ps.landerbuluse.util.plot.swing.AlphaIcon;
+import ps.hell.util.plot.swing.AlphaIcon;
 
 /**
  * An extension of

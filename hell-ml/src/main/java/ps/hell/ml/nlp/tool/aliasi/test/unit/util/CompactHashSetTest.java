@@ -6,8 +6,6 @@ import org.junit.Test;
 import java.util.*;
 
 import static ps.hell.ml.nlp.tool.aliasi.test.unit.Asserts.*;
-import static junit.framework.Assert.*;
-import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.*;
 
 public class CompactHashSetTest  {

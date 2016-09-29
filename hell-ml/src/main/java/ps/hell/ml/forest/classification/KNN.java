@@ -18,15 +18,15 @@ package ps.hell.ml.forest.classification;
 
 import java.util.Arrays;
 
-import ps.landerbuluse.ml.distance.Distance;
-import ps.landerbuluse.ml.distance.EuclideanDistance;
-import ps.landerbuluse.ml.distance.Metric;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.neighbor.CoverTree;
-import ps.landerbuluse.ml.neighbor.KDTree;
-import ps.landerbuluse.ml.neighbor.KNNSearch;
-import ps.landerbuluse.ml.neighbor.LinearSearch;
-import ps.landerbuluse.ml.neighbor.Neighbor;
+import ps.hell.math.base.distance.Distance;
+import ps.hell.math.base.distance.EuclideanDistance;
+import ps.hell.math.base.distance.Metric;
+import ps.hell.math.base.MathBase;
+import ps.hell.ml.neighbor.CoverTree;
+import ps.hell.ml.neighbor.KDTree;
+import ps.hell.ml.neighbor.KNNSearch;
+import ps.hell.ml.neighbor.LinearSearch;
+import ps.hell.ml.neighbor.Neighbor;
 
 /**
  * K-nearest neighbor classifier. The k-nearest neighbor algorithm (k-NN) is

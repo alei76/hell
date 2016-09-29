@@ -22,8 +22,8 @@ import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import ps.landerbuluse.ml.forest.model.projection.RandomProjection;
-import ps.landerbuluse.ml.math.MathBase;
+import ps.hell.ml.forest.model.projection.RandomProjection;
+import ps.hell.math.base.MathBase;
 import static org.junit.Assert.*;
 
 /**

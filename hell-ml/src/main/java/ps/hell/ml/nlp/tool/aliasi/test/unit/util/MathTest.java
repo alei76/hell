@@ -18,8 +18,8 @@ package ps.hell.ml.nlp.tool.aliasi.test.unit.util;
 
 import ps.hell.ml.nlp.tool.aliasi.util.Math;
 import org.junit.Test;
-
-import static junit.framework.Assert.*;
+//
+//import static junit.framework.Assert.*;
 import static org.junit.Assert.*;
 
 public class MathTest  {

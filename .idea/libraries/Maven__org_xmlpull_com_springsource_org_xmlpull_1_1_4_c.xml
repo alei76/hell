@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.xmlpull:com.springsource.org.xmlpull:1.1.4.c">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/xmlpull/com.springsource.org.xmlpull/1.1.4.c/com.springsource.org.xmlpull-1.1.4.c.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/xmlpull/com.springsource.org.xmlpull/1.1.4.c/com.springsource.org.xmlpull-1.1.4.c-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/xmlpull/com.springsource.org.xmlpull/1.1.4.c/com.springsource.org.xmlpull-1.1.4.c-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

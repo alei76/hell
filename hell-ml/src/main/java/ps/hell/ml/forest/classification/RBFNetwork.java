@@ -18,12 +18,12 @@ package ps.hell.ml.forest.classification;
 
 import java.util.Arrays;
 
-import ps.landerbuluse.ml.distance.Metric;
-import ps.landerbuluse.ml.math.MathBase;
-import ps.landerbuluse.ml.math.matrix.decomposition.QRDecomposition2;
-import ps.landerbuluse.ml.math.rbf.GaussianRadialBasis;
-import ps.landerbuluse.ml.math.rbf.RadialBasisFunction;
-import ps.landerbuluse.ml.util.MlUtils;
+import ps.hell.math.base.distance.Metric;
+import ps.hell.math.base.MathBase;
+import ps.hell.math.base.matrix.decomposition.QRDecomposition2;
+import ps.hell.math.base.persons.rbf.GaussianRadialBasis;
+import ps.hell.math.base.persons.rbf.RadialBasisFunction;
+import ps.hell.ml.util.MlUtils;
 
 /**
  * Radial basis function networks. A radial basis function network is an

@@ -6,9 +6,9 @@ import static com.googlecode.javacv.cpp.opencv_highgui.cvWaitKey;
 
 import java.util.Vector;
 
-import ps.landerbuluse.ml.math.matrix.Matrix;
-import ps.landerbuluse.ml.statistics.base.Normal;
-import ps.landerbuluse.plot.graph.base.BubbleGraph;
+import ps.hell.math.base.matrix.Matrix;
+import ps.hell.ml.statistics.base.Normal;
+import ps.hell.util.plot.opencv.BubbleGraph;
 
 import com.googlecode.javacv.cpp.opencv_core;
 

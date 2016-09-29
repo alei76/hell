@@ -1,10 +1,10 @@
 package ps.hell.ml.nlp.tool.hanlp.hankcs.nlp.lex;
 
-import edu.stanford.nlp.trees.*;
 import ps.hell.ml.nlp.tool.hanlp.hankcs.hanlp.HanLP;
 import ps.hell.ml.nlp.tool.hanlp.hankcs.hanlp.seg.common.Term;
 import edu.stanford.nlp.ling.Word;
 import edu.stanford.nlp.parser.lexparser.LexicalizedParser;
+import edu.stanford.nlp.trees.*;
 import edu.stanford.nlp.trees.international.pennchinese.ChineseTreebankLanguagePack;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

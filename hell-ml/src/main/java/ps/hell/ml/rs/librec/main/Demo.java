@@ -57,7 +57,7 @@ public class Demo {
 		String configDirPath = FileIO.makeDirPath(dirPath, "conf");
 
 		// prepare candidate options
-		List<String> candOptions = new ArrayList<>();
+		List<String> candOptions = new ArrayList<String>();
 		candOptions.add("General Usage:");
 		candOptions.add(" 0: the format of rating prediction results;");
 		candOptions.add(" 1: the format of item recommendation results;");

@@ -22,7 +22,6 @@ import org.junit.Test;
 import java.io.UnsupportedEncodingException;
 import java.nio.CharBuffer;
 
-import static junit.framework.Assert.*;
 import static org.junit.Assert.*;
 
 public class StringsTest  {

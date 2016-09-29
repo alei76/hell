@@ -16,7 +16,7 @@
 
 package ps.hell.ml.gap;
 
-import ps.landerbuluse.ml.math.MathBase;
+import ps.hell.math.base.MathBase;
 
 
 /**
