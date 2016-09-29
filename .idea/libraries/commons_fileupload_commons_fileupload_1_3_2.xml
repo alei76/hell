@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="commons-fileupload:commons-fileupload:1.3.2" type="repository">
+    <properties maven-id="commons-fileupload:commons-fileupload:1.3.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/javax/servlet/servlet-api/2.4/servlet-api-2.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/portlet-api/portlet-api/1.0/portlet-api-1.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-io/commons-io/2.2/commons-io-2.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

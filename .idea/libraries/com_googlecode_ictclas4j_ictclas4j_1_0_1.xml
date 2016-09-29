@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="com.googlecode.ictclas4j:ictclas4j:1.0.1" type="repository">
+    <properties maven-id="com.googlecode.ictclas4j:ictclas4j:1.0.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/ictclas4j/ictclas4j/1.0.1/ictclas4j-1.0.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-lang/commons-lang/2.4/commons-lang-2.4.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/ictclas4j/ictclas4j/1.0.1/ictclas4j-1.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/ictclas4j/ictclas4j/1.0.1/ictclas4j-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

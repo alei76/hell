@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="dom4j:dom4j:1.4-dev-7" type="repository">
+    <properties maven-id="dom4j:dom4j:1.4-dev-7" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/dom4j/dom4j/1.4-dev-7/dom4j-1.4-dev-7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

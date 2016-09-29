@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="edu.stanford.nlp:stanford-parser:3.6.0" type="repository">
+    <properties maven-id="edu.stanford.nlp:stanford-parser:3.6.0" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-parser/3.6.0/stanford-parser-3.6.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/googlecode/efficient-java-matrix-library/ejml/0.23/ejml-0.23.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.12/slf4j-api-1.7.12.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-parser/3.6.0/stanford-parser-3.6.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/edu/stanford/nlp/stanford-parser/3.6.0/stanford-parser-3.6.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

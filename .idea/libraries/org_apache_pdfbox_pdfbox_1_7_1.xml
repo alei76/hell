@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="org.apache.pdfbox:pdfbox:1.7.1" type="repository">
+    <properties maven-id="org.apache.pdfbox:pdfbox:1.7.1" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/pdfbox/pdfbox/1.7.1/pdfbox-1.7.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/pdfbox/fontbox/1.7.1/fontbox-1.7.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/pdfbox/jempbox/1.7.1/jempbox-1.7.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/pdfbox/pdfbox/1.7.1/pdfbox-1.7.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/apache/pdfbox/pdfbox/1.7.1/pdfbox-1.7.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

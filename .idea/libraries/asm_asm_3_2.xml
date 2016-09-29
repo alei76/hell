@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="asm:asm:3.2" type="repository">
+    <properties maven-id="asm:asm:3.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/asm/asm/3.2/asm-3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

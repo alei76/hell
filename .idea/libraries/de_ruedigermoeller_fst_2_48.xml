@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="de.ruedigermoeller:fst:2.48" type="repository">
+    <properties maven-id="de.ruedigermoeller:fst:2.48" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/ruedigermoeller/fst/2.48/fst-2.48.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.8.1/jackson-core-2.8.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/javassist/javassist/3.19.0-GA/javassist-3.19.0-GA.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/objenesis/objenesis/2.4/objenesis-2.4.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/cedarsoftware/java-util/1.9.0/java-util-1.9.0.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/cedarsoftware/json-io/2.5.1/json-io-2.5.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/de/ruedigermoeller/fst/2.48/fst-2.48-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/de/ruedigermoeller/fst/2.48/fst-2.48-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
