@@ -1,6 +1,9 @@
 package ps.ml.stock.data;
 
+import org.apache.commons.codec.EncoderException;
+
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -60,7 +63,7 @@ public class StockDataApi implements StockDataServer {
         return list;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException, EncoderException {
         StockDataServer server =new StockDataApi();
         server.test();
     }

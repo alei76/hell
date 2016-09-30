@@ -30,6 +30,7 @@ public class StockTool {
             String line;
             while((line = reader.readLine()) != null){
                 System.out.println(line.split(",")[0]);
+                
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();
