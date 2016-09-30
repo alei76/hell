@@ -1,4 +1,6 @@
-package ps.ml.stock.data;
+package ps.landerbuluse.stock.data.tool;
+
+import ps.landerbuluse.stock.data.StockBean;
 
 import java.util.ArrayList;
 import java.util.List;

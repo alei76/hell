@@ -1,4 +1,4 @@
-package ps.ml.stock.data;
+package ps.landerbuluse.stock.data;
 
 /**
  * Created by Administrator on 2016/9/23.
