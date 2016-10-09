@@ -3,14 +3,10 @@ package ps.landerbuluse.stock.data;
 /**
  * Created by Administrator on 2016/9/23.
  */
-
-
 import ps.landerbuluse.stock.user.account.AccountLogger;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Map;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * 股票 data数据源
@@ -49,6 +45,65 @@ public class StockData {
     public StockData(String stockName,String stockId){
         this.stockName=stockName;
         this.stockId = stockId;
+    }
+
+    /**
+     * 获取最近几日数据
+     * @param val
+     * @return
+     */
+    public ArrayList<StockBean> getCurrentData(int val,String date){
+        Integer index = getIndexByDate(date);
+        ArrayList<StockBean> list = new ArrayList<StockBean>();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar calendar=Calendar.getInstance();
+        String date2 =null;
+        try {
+            Date da = sdf.parse(date);
+            calendar.setTime(da);
+            calendar.add(Calendar.DAY_OF_YEAR, -val);
+            date2 = calendar.get(Calendar.YEAR)+"-"+calendar.get(Calendar.MONTH)+"-"+calendar.get(Calendar.DAY_OF_MONTH);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        if(index ==null){
+            if(data.size()==0){
+                return list;
+            }else {
+                if (data.get(data.size() - 1).getDate().compareTo(date) >0){
+                    int in = data.size()-1;
+                    while(true){
+                        if(in<0){
+                            break;
+                        }
+                        if(data.get(in).getDate().compareTo(date2)>=0){
+                            list.add(data.get(in));
+                        }
+                        in--;
+                    }
+                    Collections.reverse(list);
+                }
+            }
+            return list;
+        }
+        return list;
+    }
+
+    /**
+     * 获取从一个日期之前的所有数据
+     * @param date 获取的数据
+     * @return
+     */
+    public ArrayList<StockBean> getCurrentData(String date){
+        ArrayList<StockBean> list = new ArrayList<StockBean>();
+       for(StockBean bean:list){
+           if(bean.getDate().compareTo(date)<=0){
+               list.add(bean);
+           }else{
+               break;
+           }
+       }
+        return list;
     }
 
     /**
@@ -99,6 +154,14 @@ public class StockData {
             return null;
         }
         return this.data.get(val);
+    }
+
+    /**
+     * 获取索引值根据时间
+     * @return
+     */
+    public Integer getIndexByDate(String date){
+        return this.index.map.getByKey(date);
     }
 
     /**

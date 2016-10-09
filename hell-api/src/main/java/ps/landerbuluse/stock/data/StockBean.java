@@ -6,6 +6,7 @@ package ps.landerbuluse.stock.data;
 public class StockBean {
     /**
      * 时间
+     * 2013-06-01
      */
     public String date = null;
 

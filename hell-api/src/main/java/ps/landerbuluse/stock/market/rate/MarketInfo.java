@@ -19,6 +19,9 @@ public class MarketInfo {
      */
     public float marketRate =0f;
 
+    /**
+     * 市场数据
+     */
     public StockData marketData =null;
 
     public MarketInfo(StockDataServer server){
