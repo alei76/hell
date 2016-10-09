@@ -11,11 +11,29 @@ import java.util.ArrayList;
  */
 public interface StockDataServer {
 
+    /**
+     * 获取基准市场数据集
+     * @return
+     */
+    public StockData getStranderData();
 
+    /**
+     * 获取某一个数据集
+     * @param stockName
+     * @param stockId
+     * @param start
+     * @param end
+     * @return
+     */
     public StockData getData(String stockName,String stockId,String start,String end);
 
     public ArrayList<StockData> getData(StocksConfig config);
 
+    /**
+     * 需要加载到stockData中
+     * @param stockData
+     * @param line
+     */
     public void parse(StockData stockData,String line);
 
     public void test();

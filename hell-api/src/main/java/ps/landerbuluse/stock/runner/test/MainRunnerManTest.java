@@ -15,7 +15,7 @@ public class MainRunnerManTest {
 
     public static void main(String[] args) {
         StocksConfig config = new StocksConfig();
-        config.add("test", "sz000025", "20160101", "20160901");
+        config.add("test", "sz000001", "20160101", "20160930");
         //策略执行
         MainRunnerMan man = new MainRunnerMan(config);
         UserBean bean = new UserBean();

@@ -7,7 +7,7 @@ public class StockBean {
     /**
      * 时间
      */
-    public String date =null;
+    public String date = null;
 
     /**
      * 开盘价
@@ -22,11 +22,11 @@ public class StockBean {
     /**
      * 当日最高价
      */
-    public Float hightPrice =0f;
+    public Float hightPrice = 0f;
     /**
      * 当日最低价
      */
-    public Float lowerPrice =0f;
+    public Float lowerPrice = 0f;
     /**
      * 成交量
      */
@@ -78,5 +78,17 @@ public class StockBean {
 
     public Long getUrnover() {
         return urnover;
+    }
+
+    @Override
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        sb.append("时间:").append(getDate()).append("\t");
+        sb.append("开盘价:").append(getOpenPrice()).append("\t");
+        sb.append("收盘价:").append(getClosePrice()).append("\t");
+        sb.append("最高价:").append(getHightPrice()).append("\t");
+        sb.append("最低价:").append(getLowerPrice()).append("\t");
+        sb.append("成交量:").append(getUrnover());
+        return sb.toString();
     }
 }

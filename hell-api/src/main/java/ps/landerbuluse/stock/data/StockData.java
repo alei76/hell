@@ -5,7 +5,12 @@ package ps.landerbuluse.stock.data;
  */
 
 
+import ps.landerbuluse.stock.user.account.AccountLogger;
+
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Map;
 
 /**
  * 股票 data数据源
@@ -44,6 +49,43 @@ public class StockData {
     public StockData(String stockName,String stockId){
         this.stockName=stockName;
         this.stockId = stockId;
+    }
+
+    /**
+     * 获取交互后的交叉数据
+     * @param data2
+     * @return
+     */
+    public ArrayList<String> getUnionDate(StockData data2){
+        HashSet<String> set = new HashSet<String>();
+        for(Map.Entry<String,Integer> m:this.index.map.map.entrySet()){
+            set.add(m.getKey());
+        }
+        for(Map.Entry<String,Integer> m:data2.index.map.map.entrySet()){
+            set.add(m.getKey());
+        }
+        ArrayList<String> date2 = new ArrayList<String>();
+        for(String st:set){
+            date2.add(st);
+        }
+        Collections.sort(date2);
+        return date2;
+    }
+
+    public ArrayList<String> getUnionDate(ArrayList<AccountLogger> data){
+        HashSet<String> set = new HashSet<String>();
+        for(Map.Entry<String,Integer> m:this.index.map.map.entrySet()){
+            set.add(m.getKey());
+        }
+        for(int i=0;i<data.size();i++){
+            set.add(data.get(i).getDate());
+        }
+        ArrayList<String> date2 = new ArrayList<String>();
+        for(String st:set){
+            date2.add(st);
+        }
+        Collections.sort(date2);
+        return date2;
     }
 
     /**

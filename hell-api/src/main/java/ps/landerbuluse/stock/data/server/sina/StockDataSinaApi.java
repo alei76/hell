@@ -20,25 +20,36 @@ public class StockDataSinaApi implements StockDataServer {
 
     public String url ="";
 
-    public String stockId= "sh600000";
+    public String stockId= "sh000300";
 
     public String start = "20150101";
 
     public String end = "20150809";
 
+    public StockDataSinaApi(){
+
+    }
+    public StockDataSinaApi(String start,String end){
+        this.start = start;
+        this.end = end;
+    }
+
     public void test(){
-        StockData obj  = getData(null,this.stockId,this.start,this.end);
-//        int len = obj.size();
-//        for(int i=0;i<len;i++){
-//            System.out.println(obj.get(i));
-//        }
+        ArrayList<StockBean> list = getData(null,this.stockId,this.start,this.end).getData();
+        int len = list.size();
+        for(int i=0;i<len;i++){
+            System.out.println(list.get(i));
+        }
     }
 
 
     @Override
     public ArrayList<StockData> getData(StocksConfig config) {
+
         ArrayList<StockData> datas=new ArrayList<StockData>();
         for(StockConfig con :config.getStocksConfig()) {
+            this.start = con.getStart();
+            this.end = con.getEnd();
             datas.add(getData(con.getStockName(), con.getStockId(), con.getStart(), con.getEnd()));
         }
         return datas;
@@ -55,6 +66,12 @@ public class StockDataSinaApi implements StockDataServer {
         bean.setLowerPrice(Float.parseFloat(splits[4]));
         bean.setUrnover(Long.parseLong(splits[5]));
         stockData.addStockBeanByDay(bean);
+    }
+
+    @Override
+    public StockData getStranderData() {
+//        System.out.println("沪300 sh000300 " + this.start + ":" +this.end);
+        return getData("沪300","sh000300", this.start, this.end);
     }
 
     public StockData getData(String stockName,String stockId, String start, String end) {

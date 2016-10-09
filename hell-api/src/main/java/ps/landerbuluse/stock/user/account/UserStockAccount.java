@@ -2,7 +2,8 @@ package ps.landerbuluse.stock.user.account;
 
 import ps.landerbuluse.stock.data.StockData;
 import ps.landerbuluse.stock.data.plot.KLineCombineChart;
-import ps.landerbuluse.stock.market.rate.FeeFactory;
+import ps.landerbuluse.stock.indexFactor.IndexFactor;
+import ps.landerbuluse.stock.market.FeeFactory;
 import ps.landerbuluse.stock.market.rate.server.FeeInter;
 import ps.landerbuluse.stock.user.account.stock.StockAccount;
 
@@ -16,6 +17,7 @@ import java.util.Map;
  * 用户股票账户
  */
 public class UserStockAccount {
+
 //    Logger logger =new Logger.getLogger(UserStockAccount.class);
 
     /**
@@ -32,18 +34,17 @@ public class UserStockAccount {
      * 账户历史值
      */
     private ArrayList<AccountLogger> accountLogger = new ArrayList<AccountLogger>();
+
     /**
      * 滤重
      */
     private HashSet<String> accountSet =new HashSet<String>();
 
-
-
     /**
-
      * 账户余额
      */
     private float  accountBalanceMoney =0f;
+
     /**
      * 股票账户总金额
      */
@@ -73,6 +74,7 @@ public class UserStockAccount {
     public void setAccountLogger(ArrayList<AccountLogger> accountLogger) {
         this.accountLogger = accountLogger;
     }
+
     /**
      * 计算股票账户
      */
@@ -205,12 +207,22 @@ public class UserStockAccount {
         return acc.num;
     }
 
+    /**
+     * 获取账户真实收益率
+     * @return
+     */
+    public float getRealRate(){
+        return (float)((this.accountBalanceMoney+this.stockBalanceMoney)/this.sourceAccount);
+    }
 
-    public void printAccountStatus(){
+    public void printAccountStatus(ArrayList<IndexFactor> IndexFactor){
         computestockBalanceMoney(null);
         System.out.println("成本:" + this.sourceAccount);
         System.out.println("账户余额:" + this.accountBalanceMoney);
         System.out.println("股票账户:" + this.stockBalanceMoney);
         System.out.println("收益率:"+((this.accountBalanceMoney+this.stockBalanceMoney)*100/this.sourceAccount-100)+"%");
+        for(IndexFactor index:IndexFactor) {
+            System.out.println(index.getName()+":"+index.getIndex());
+        }
     }
 }

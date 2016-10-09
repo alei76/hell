@@ -6,8 +6,9 @@ import ps.landerbuluse.stock.data.StockData;
 import ps.landerbuluse.stock.data.plot.KLineCombineChart;
 import ps.landerbuluse.stock.data.server.StockDataServer;
 import ps.landerbuluse.stock.data.server.sina.StockDataSinaApi;
-import ps.landerbuluse.stock.market.rate.FeeFactory;
+import ps.landerbuluse.stock.market.FeeFactory;
 import ps.landerbuluse.stock.market.rate.HandlingCharge;
+import ps.landerbuluse.stock.market.rate.MarketInfo;
 import ps.landerbuluse.stock.market.rate.StampTaxBean;
 import ps.landerbuluse.stock.model.server.ModelTrainServer;
 import ps.landerbuluse.stock.runner.running.RuningMethod;
@@ -48,7 +49,21 @@ public class MainRunnerMan extends Thread {
     }
 
     public void initUser(UserBean user){
+        if(this.server ==null){
+            String start =null;
+            String end =null;
+
+            for(StockConfig config:this.stocksConfig.getStocksConfig()){
+                start = config.start;
+                end = config.end;
+            }
+            this.server = new StockDataSinaApi(start,end);
+        }
+
         this.user = user;
+        user.setMarketInfo(new MarketInfo(this.server));
+        user.init();
+        init();
     }
 
     public void setStockDataServer(StockDataServer server){
@@ -58,7 +73,6 @@ public class MainRunnerMan extends Thread {
      * 线程执行函数
      */
     public void run(){
-        init();
         this.stockData = server.getData(this.stocksConfig);
         user.init(this.stockData);
         //获取正向有序的时间
@@ -109,9 +123,7 @@ public class MainRunnerMan extends Thread {
 
 
     public void init(){
-        if(this.server ==null){
-            this.server = new StockDataSinaApi();
-        }
+
         //默认是两种费率
         //手续费
         user.addFee(new HandlingCharge());
